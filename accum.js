@@ -1,27 +1,38 @@
 function accum(s) {
-	// your code
-	const split = s.split('')
-	let index = Object.keys(split)
-	console.log(index);
+console.log("s:", s);
+// dclare master array
+let master = []
+console.log("Master:", master);
+// split string into array of letters
+let split = s.split('')
+console.log("Split:", split);
 
-  for(let letter in split){
-		// determine the index number of letter
-		// need to use keys here
-		// set letter to uppercase
-		let upper = letter.toUpperCase()
-		// get lower case version of letter
-		let lower = letter.toLowerCase()
-		// add lower to upper index number of times
-		let combined = upper + lower
-		// console.log(combined);
+// for each letter:
+	for(var i = 0; i >= 0; i++){
+	// toUpperCase the letter, assign to let
+		let upper = split[i].toUpperCase()
+		console.log("Upper:", upper);
+		// lowerCase the letter, assign to let
+		let lower = split[i].toLowerCase()
+		console.log("Lower;", lower);
+		// make a new array
+		let letterArr = []
+		// push the lower case letter into the array
+		// repeat (key value) times
+		for(var j = 0; j > 0; j++){
+			letterArr.push(lower)
+		}
+		// push upperCase letter into array
+		letterArr.push(upper)
+		// join the array
+		letterArr.join()
+		console.log("Final letterArr:", letterArr);
+	}
 }
-	return split;
-//   split s
-//  push(print each index value toUpperCase + print x index value)
-// join
-}
+// push array into master array
 
-console.log(accum("ZpglnRxqenU"));
+
+console.log(accum("ZpglnRxqenU"))
 
 var arr = ['a', , 'c'];
 var sparseKeys = Object.keys(arr);
